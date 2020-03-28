@@ -43,8 +43,23 @@ console.log(book);
 
 book.sayHello = function() {
     console.log(`Hello ${book.author}`);
-    console.log(`Hello ${this.author}`); // both work
+//    console.log(`Hello ${this.author}`);
 }
+
+// *** Posted on Slack by Sonia ***
+//
+// An example of why we use "this":
+//
+// let title ="not harry potter"
+// const book = {
+//     title: "Harry Potter",
+//     printTitle: function() {
+//         console.log(`i love ${this.title}`);
+//     },
+//     printOutsideTitle: function () {
+//         console.log(`i love ${title}`);
+//     }
+// }
 
 book.sayHello();
 
